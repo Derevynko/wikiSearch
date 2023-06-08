@@ -10,7 +10,8 @@ function ListOfArticles() {
   const pageNumber = searchParams.get("page");
   let value =
     useSelector((state) => state.userInput.userInput) ||
-    searchParams.get("search");
+    searchParams.get("search") ||
+    "";
   let { dataResponse, isFetching, error } = useGetWikiSearchQuery(`${value}`, {
     skip: value === "",
     selectFromResult: ({ data, isFetching, error }) => ({
