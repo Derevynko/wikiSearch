@@ -6,7 +6,8 @@
     "start": "webpack serve --open",
     "build": "webpack",
     "build-prod": "webpack --mode=production",
-    "clean": "rd /s /q dist"
+    "clean": "rd /s /q dist",
+    "eslint": "eslint"
   },
   "author": "Maksim Derevianko",
   "license": "ISC",
@@ -37,9 +38,18 @@
     "babel-preset-env": "^1.7.0",
     "babel-preset-es2015": "^6.24.1",
     "css-loader": "^6.7.3",
+    "eslint": "^8.42.0",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-config-prettier": "^8.8.0",
+    "eslint-plugin-import": "^2.27.5",
+    "eslint-plugin-jsx-a11y": "^6.7.1",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-react": "^7.32.2",
+    "eslint-plugin-react-hooks": "^4.6.0",
     "file-loader": "^6.2.0",
     "gulp-babel": "^8.0.0",
     "html-webpack-plugin": "^5.5.1",
+    "prettier": "2.8.8",
     "webpack-dev-server": "^4.13.3"
   },
   "proxy": {

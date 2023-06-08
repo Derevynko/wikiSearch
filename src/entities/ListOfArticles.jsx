@@ -35,7 +35,6 @@ function ListOfArticles() {
   return error ? (
     <h1>{error.status}</h1>
   ) : (
-    <>
       <List
         pagination={{
           position: "bottom",
@@ -64,7 +63,6 @@ function ListOfArticles() {
           </List.Item>
         )}
       />
-    </>
   );
 }
 export default ListOfArticles;
