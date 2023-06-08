@@ -10,11 +10,9 @@ const UserInputSlice = createSlice({
         updataUserInput(state, action) {
             state.userInput=action.payload
         },
-        updataRequest(state, action) {
-            state.requestData=action.payload
-        },
+       
         
 }})
 
-export const {updataUserInput, updataRequest} = UserInputSlice.actions
+export const {updataUserInput} = UserInputSlice.actions
 export default UserInputSlice.reducer
