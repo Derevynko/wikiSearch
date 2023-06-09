@@ -1,6 +1,6 @@
 import { configureStore } from "@reduxjs/toolkit";
-import userInputUpdateReducer from "./UserInputSlice"
-import {wikiApi} from "./wikiAp"
+import userInputUpdateReducer from "./UserInputSlice.mjs"
+import {wikiApi} from "./wikiAp.mjs"
 import { setupListeners } from "@reduxjs/toolkit/dist/query";
 
 export const store = configureStore ({

@@ -2,23 +2,22 @@ import React from "react";
 import { Input } from "antd";
 import "./UserInput.css";
 import { useDispatch } from "react-redux";
-import { updataUserInput } from "../store/UserInputSlice";
 import { useSearchParams } from "react-router-dom";
+import { updataUserInput } from "../store/UserInputSlice.mjs";
 function UserInput() {
   const [searchParams] = useSearchParams();
   const dispatch = useDispatch();
   function debounce(func, delay) {
     let timeout;
-    return function () {
+    return function returnDebounce(...args) {
       const context = this;
-      const args = arguments;
       clearTimeout(timeout);
       timeout = setTimeout(() => func.apply(context, args), delay);
     };
   }
   function updateInput(e) {
-    const value = e.target.value;
-    history.pushState(
+    const { value } = e.target;
+    window.history.pushState(
       value,
       "page 2",
       `?search=${value}&page=${searchParams.get("page") || 1}`
